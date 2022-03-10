@@ -3,7 +3,7 @@ R = Rock
 P = paper
 S = Scissors
 
-count wins losses Ties
+count => wins losses and ties
 """
 
 
@@ -13,10 +13,13 @@ import random
 import sys
 
 
-# print message and declare variables
+# print welcome message and declare variables
 
 print("#####################################")
-print("####### ROCK, PAPER, SCISSORS #######")
+print("#####          Welcome          #####")
+print("#####            TO             #####")
+print("#####    ROCK, PAPER, SCISSORS  #####")
+print("#####           GAME            #####")
 print("#####################################")
 
 wins = 0
@@ -25,17 +28,19 @@ ties = 0
 count = 0
 
 while True:     # main loop
-    print('%s Wins, %s Losses, %s Ties' %(wins, losses, ties))
+    print('\n%s Wins, %s Losses, %s Ties' %(wins, losses, ties))
 
     while True:     # player input loop
-        print("Enter your move => (r)ock (p)aper (s)cissors or (q)uit:")
+        print("\nEnter your move => (r)ock (p)aper (s)cissors or (q)uit:")
         playMove = input()
 
         if playMove == 'q' or playMove == 'Q':
+            print("\n")
             print("#########################################")
             print('Game Summary: %s Wins, %s Losses, %s Ties' % (wins, losses, ties))
-            print("#########################################")
-
+            print("#########################################\n")
+            
+            # logic to decide outcome based on the game summary
             if wins > losses and wins > ties:
                 print("You Won the game!")
             elif losses > wins and losses > ties:
@@ -78,7 +83,7 @@ while True:     # main loop
         print("SCISSORS")
 
 
-# display records
+# display records and count scores
 
     if playMove == computerMove:
         print("It's a tie!")
