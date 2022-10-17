@@ -1,1 +1,3 @@
-Do ->> Don;ts: Disconnected
+SequenceDiagram
+
+Do->>Don'ts: Disconnected
